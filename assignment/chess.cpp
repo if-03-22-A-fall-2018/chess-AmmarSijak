@@ -36,7 +36,11 @@
    }
    void 	init_chess_board (ChessBoard chess_board)
    {
-     chess_board = {0};
+     for (int i = 0; i < 8; i++) {
+       for (int j = 0; j < 8; j++) {
+         (chess_board[i][j].is_occupied = false
+         }
+       }
    }
    struct ChessSquare * 	get_square (ChessBoard chess_board, File file, Rank rank)
    {
@@ -47,6 +51,17 @@
    }
    bool 	is_square_occupied (ChessBoard chess_board, File file, Rank rank)
    {
+     for (int i = 0; i < 8; i++) {
+   		for (int j = 0; j < 8; j++) {
+        if (chess_board[i][j].is_occupied) {
+          return printf("Chessboard is not empty\n", );
+        }
+        else{
+          return printf("Chessboard is empty\n", );
+        }
+   		(
+      }
+    }
     return (chess_board[file - 1][rank - 1].is_occupied);
    }
    bool 	add_piece (ChessBoard chess_board, File file, Rank rank, struct ChessPiece piece)
